@@ -1,4 +1,4 @@
-# Create a new directory for your project and navigate into it:
+# Create a new directory for your project:
 ```
 mkdir calculator-app
 ```
