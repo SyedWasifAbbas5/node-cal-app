@@ -31,6 +31,7 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
+    
     - name: Tag Docker image
       run: |
         docker tag express-calculator ${{ secrets.DOCKER_USERNAME }}/express-calculator:latest
