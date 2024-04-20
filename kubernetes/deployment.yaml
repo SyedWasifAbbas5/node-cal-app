@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: express-calculator-deployment
+spec:
+  replicas: 1  # Adjust the number of replicas as needed
+  selector:
+    matchLabels:
+      app: express-calculator
+  template:
+    metadata:
+      labels:
+        app: express-calculator
+    spec:
+      containers:
+      - name: express-calculator
+        image: syedwasifabbas/express-calculator:latest  # Replace with your Docker Hub username
+        ports:
