@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - name: Checkout repository
@@ -40,10 +40,10 @@ jobs:
       run: |
         docker push ${{ secrets.DOCKER_USERNAME }}/express-calculator:latest
 
-    - name: Set up kubectl
-      run: |
-        mkdir -p ~/.kube
-        echo "${{ secrets.KUBECONFIG }}" > ~/.kube/config
+    # - name: Set up kubectl
+     # run: |
+      #  mkdir -p ~/.kube
+       # echo "${{ secrets.KUBECONFIG }}" > ~/.kube/config
 
     - name: Apply Kubernetes manifests
       run: |
